@@ -8,3 +8,5 @@ Modified Sections:
     3.9.b --
     5.3 --
     5.6 --
+
+TESTING AUTOMATED COMMIT SHELL SCRIPT
