@@ -1,0 +1,26 @@
+grouping active-voip-call-summary {
+    description
+      "Total active VOIP call summary";
+    leaf telephony-call-legs {
+      type uint32;
+      description
+        "Total number of telephony call legs";
+    }
+    leaf sip-call-legs {
+      type uint32;
+      description
+        "Total number of SIP call legs";
+    }
+    leaf total-call-legs {
+      type uint32;
+      description
+        "Total number of SIP and telephony legs";
+    }
+    list active-voip-call-details {
+      key "call-index call-setuptime";
+      description
+        "A list of active VOIP call leg details";
+      uses voice-ios-xe-oper:active-voip-call-key;
+      uses voice-ios-xe-oper:active-voip-call-details;
+    }
+  }
